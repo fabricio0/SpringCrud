@@ -16,6 +16,16 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 	<input type="text" id="sobrenome" name="sobrenome" th:field="*{sobrenome}">
 	<button type="submit">Salvar</button>
 </form>
+
+<br />
+<br />
+<form method="post" action="/pesquisaPorNome">
+<label for="nomeUsuario">Insira o nome a ser pesquisado: </label>
+<input id="nomeUsuario" name="nomeUsuario" type="text" />
+<button type="submit">Pesquisar</button>
+</form>
+<br />
+<br />
 <table>
 <tr th:each="usuario : ${usuarios}">
 	<td th:text="${usuario.id}">
